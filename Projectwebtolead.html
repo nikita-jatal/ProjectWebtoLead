@@ -2,198 +2,196 @@
 <html lang="en">
 <head>
 <meta charset="UTF-8"/>
+<meta HTTP-EQUIV="Content-type" CONTENT="text/html; charset=UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
 <title>CardEdge — Premium Credit Cards</title>
 <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;600;700&family=DM+Sans:wght@300;400;500&display=swap" rel="stylesheet"/>
 <style>
 *,*::before,*::after{box-sizing:border-box;margin:0;padding:0}
 :root{
-  --navy:#0b1f3a;
-  --navy2:#122848;
-  --blue:#1a4f8a;
-  --gold:#c9a84c;
-  --gold2:#e8c96a;
-  --cream:#faf7f2;
-  --white:#ffffff;
-  --muted:#6b8cae;
-  --border:#d4e0ee;
-  --red:#c0392b;
+  --navy:#0b1f3a;--navy2:#122848;--blue:#1a4f8a;--gold:#c9a84c;--gold2:#e8c96a;
+  --cream:#faf7f2;--white:#ffffff;--muted:#6b8cae;--border:#d4e0ee;--red:#c0392b;
 }
 html{scroll-behavior:smooth}
 body{font-family:'DM Sans',sans-serif;background:var(--cream);color:var(--navy);overflow-x:hidden}
 
-/* ── NAV ── */
-nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,31,58,0.96);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:68px}
-.nav-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:var(--white);letter-spacing:1px}
+/* NAV */
+nav{position:fixed;top:0;left:0;right:0;z-index:100;background:rgba(11,31,58,0.97);backdrop-filter:blur(8px);display:flex;align-items:center;justify-content:space-between;padding:0 60px;height:68px}
+.nav-logo{font-family:'Cormorant Garamond',serif;font-size:26px;font-weight:700;color:#fff;letter-spacing:1px}
 .nav-logo span{color:var(--gold)}
 .nav-links{display:flex;gap:32px;list-style:none}
-.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;font-weight:400;transition:color 0.2s}
+.nav-links a{color:rgba(255,255,255,0.75);text-decoration:none;font-size:14px;transition:color .2s}
 .nav-links a:hover{color:var(--gold)}
-.nav-cta{background:var(--gold);color:var(--navy);border:none;border-radius:6px;padding:9px 22px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:background 0.2s}
+.nav-cta{background:var(--gold);color:var(--navy);border:none;border-radius:6px;padding:9px 22px;font-family:'DM Sans',sans-serif;font-size:13px;font-weight:500;cursor:pointer;transition:background .2s}
 .nav-cta:hover{background:var(--gold2)}
 
-/* ── HERO ── */
+/* HERO */
 .hero{min-height:100vh;background:var(--navy);display:flex;align-items:center;position:relative;overflow:hidden;padding-top:68px}
-.hero-bg{position:absolute;inset:0;overflow:hidden}
-.hero-circle{position:absolute;border-radius:50%;opacity:0.07}
-.hero-circle-1{width:700px;height:700px;background:var(--gold);right:-200px;top:-150px}
-.hero-circle-2{width:400px;height:400px;background:var(--blue);left:-100px;bottom:-100px}
-.hero-lines{position:absolute;inset:0}
-.hero-line{position:absolute;background:rgba(201,168,76,0.08);transform:rotate(-25deg)}
-.hero-line:nth-child(1){width:2px;height:200%;left:30%;top:-50%}
-.hero-line:nth-child(2){width:1px;height:200%;left:55%;top:-50%}
-.hero-line:nth-child(3){width:2px;height:200%;left:75%;top:-50%}
+.hbg{position:absolute;inset:0;overflow:hidden}
+.hc{position:absolute;border-radius:50%;opacity:.07}
+.hc1{width:700px;height:700px;background:var(--gold);right:-200px;top:-150px}
+.hc2{width:400px;height:400px;background:var(--blue);left:-100px;bottom:-100px}
+.hlines{position:absolute;inset:0}
+.hl{position:absolute;background:rgba(201,168,76,.08);transform:rotate(-25deg)}
+.hl:nth-child(1){width:2px;height:200%;left:30%;top:-50%}
+.hl:nth-child(2){width:1px;height:200%;left:55%;top:-50%}
+.hl:nth-child(3){width:2px;height:200%;left:75%;top:-50%}
 .hero-content{position:relative;z-index:2;max-width:1200px;margin:0 auto;padding:0 60px;display:grid;grid-template-columns:1fr 1fr;gap:60px;align-items:center}
-.hero-text{animation:fadeUp 0.8s ease both}
-.hero-eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px;font-weight:400}
-.hero-h1{font-family:'Cormorant Garamond',serif;font-size:62px;line-height:1.08;color:var(--white);margin-bottom:24px;font-weight:700}
+.hero-text{animation:fadeUp .8s ease both}
+.eyebrow{font-size:12px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:20px}
+.hero-h1{font-family:'Cormorant Garamond',serif;font-size:62px;line-height:1.08;color:#fff;margin-bottom:24px;font-weight:700}
 .hero-h1 em{color:var(--gold);font-style:normal}
-.hero-p{color:rgba(255,255,255,0.65);font-size:16px;line-height:1.7;margin-bottom:36px;max-width:440px}
+.hero-p{color:rgba(255,255,255,.65);font-size:16px;line-height:1.7;margin-bottom:36px;max-width:440px}
 .hero-btns{display:flex;gap:14px;flex-wrap:wrap}
-.btn-gold{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:14px 32px;font-family:'DM Sans',sans-serif;font-size:15px;font-weight:500;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block}
+.btn-gold{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:14px 32px;font-size:15px;font-weight:500;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
 .btn-gold:hover{background:var(--gold2);transform:translateY(-1px)}
-.btn-outline{background:transparent;color:var(--white);border:1.5px solid rgba(255,255,255,0.35);border-radius:8px;padding:14px 32px;font-size:15px;cursor:pointer;transition:all 0.2s;text-decoration:none;display:inline-block}
+.btn-outline{background:transparent;color:#fff;border:1.5px solid rgba(255,255,255,.35);border-radius:8px;padding:14px 32px;font-size:15px;cursor:pointer;text-decoration:none;display:inline-block;transition:all .2s}
 .btn-outline:hover{border-color:var(--gold);color:var(--gold)}
-.hero-card-visual{position:relative;animation:fadeUp 0.8s 0.2s ease both}
-.card-3d{position:relative;width:380px;height:240px;border-radius:20px;background:linear-gradient(135deg,#1a4f8a 0%,#0b1f3a 50%,#1a3a6e 100%);box-shadow:0 40px 80px rgba(0,0,0,0.5);padding:30px;display:flex;flex-direction:column;justify-content:space-between;margin:0 auto}
-.card-chip{width:42px;height:32px;background:linear-gradient(135deg,#c9a84c,#e8c96a);border-radius:6px;display:flex;align-items:center;justify-content:center}
-.card-chip-lines{display:grid;grid-template-columns:1fr 1fr;gap:3px}
-.card-chip-line{background:rgba(0,0,0,0.2);height:2px;border-radius:1px}
-.card-brand{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(255,255,255,0.9);font-weight:600;letter-spacing:2px}
-.card-number{font-size:16px;color:rgba(255,255,255,0.7);letter-spacing:4px;font-weight:300}
-.card-footer-row{display:flex;justify-content:space-between;align-items:flex-end}
-.card-holder-label{font-size:9px;color:rgba(255,255,255,0.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
-.card-holder-name{font-size:13px;color:var(--white);font-weight:500;letter-spacing:1px}
-.card-expire{text-align:right}
-.card-wifi{font-size:22px;color:rgba(255,255,255,0.5)}
-.card-glow{position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:300px;height:300px;background:radial-gradient(circle,rgba(201,168,76,0.12) 0%,transparent 70%);pointer-events:none}
 .hero-stats{display:flex;gap:32px;margin-top:48px}
 .stat{border-left:2px solid var(--gold);padding-left:16px}
-.stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:var(--white);font-weight:700}
-.stat-label{font-size:12px;color:var(--muted);margin-top:2px}
+.stat-num{font-family:'Cormorant Garamond',serif;font-size:28px;color:#fff;font-weight:700}
+.stat-lbl{font-size:12px;color:var(--muted);margin-top:2px}
+.card-3d{position:relative;width:380px;height:240px;border-radius:20px;background:linear-gradient(135deg,#1a4f8a 0%,#0b1f3a 50%,#1a3a6e 100%);box-shadow:0 40px 80px rgba(0,0,0,.5);padding:30px;display:flex;flex-direction:column;justify-content:space-between;margin:0 auto;animation:fadeUp .8s .2s ease both}
+.chip{width:42px;height:32px;background:linear-gradient(135deg,#c9a84c,#e8c96a);border-radius:6px}
+.card-num{font-size:16px;color:rgba(255,255,255,.7);letter-spacing:4px;font-weight:300}
+.card-footer-row{display:flex;justify-content:space-between;align-items:flex-end}
+.card-lbl{font-size:9px;color:rgba(255,255,255,.4);text-transform:uppercase;letter-spacing:1px;margin-bottom:3px}
+.card-val{font-size:13px;color:#fff;font-weight:500;letter-spacing:1px}
+.card-brand{font-family:'Cormorant Garamond',serif;font-size:20px;color:rgba(255,255,255,.9);font-weight:600;letter-spacing:2px}
 
-/* ── CARDS SECTION ── */
+/* CARDS SECTION */
 .section{padding:100px 60px;max-width:1200px;margin:0 auto}
-.section-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
-.section-h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.2}
-.section-p{color:var(--muted);font-size:15px;max-width:500px;line-height:1.7;margin-bottom:48px}
+.sec-eyebrow{font-size:11px;letter-spacing:3px;text-transform:uppercase;color:var(--gold);margin-bottom:12px}
+.sec-h2{font-family:'Cormorant Garamond',serif;font-size:44px;font-weight:700;color:var(--navy);margin-bottom:16px;line-height:1.2}
+.sec-p{color:var(--muted);font-size:15px;max-width:500px;line-height:1.7;margin-bottom:48px}
 .cards-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
-.card-product{background:var(--white);border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:transform 0.3s,box-shadow 0.3s;position:relative}
-.card-product:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(11,31,58,0.12)}
-.card-product.featured{border:2px solid var(--gold)}
-.card-product-banner{background:var(--gold);color:var(--navy);font-size:11px;font-weight:500;text-align:center;padding:6px;letter-spacing:1px;text-transform:uppercase}
-.card-product-img{background:linear-gradient(135deg,#0b1f3a,#1a4f8a);height:160px;display:flex;align-items:center;justify-content:center;position:relative;overflow:hidden}
-.card-mini{width:200px;height:120px;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
-.card-mini.platinum{background:linear-gradient(135deg,#2c3e50,#34495e)}
-.card-mini.gold-card{background:linear-gradient(135deg,#7d6608,#c9a84c)}
-.card-mini.silver{background:linear-gradient(135deg,#4a4a4a,#7a7a7a)}
-.card-mini-name{font-size:11px;color:rgba(255,255,255,0.6);letter-spacing:2px}
-.card-mini-brand{font-family:'Cormorant Garamond',serif;font-size:17px;color:white;font-weight:700}
-.card-product-body{padding:24px}
-.card-product-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;margin-bottom:4px}
-.card-product-sub{font-size:12px;color:var(--muted);margin-bottom:16px}
-.card-limit{font-size:13px;font-weight:500;color:var(--blue);background:#e8f0fb;border-radius:6px;padding:6px 12px;display:inline-block;margin-bottom:16px}
-.card-features{list-style:none;margin-bottom:20px}
-.card-features li{font-size:13px;color:#445;padding:5px 0;border-bottom:1px solid #f0f4f8;display:flex;align-items:center;gap:8px}
-.card-features li:last-child{border-bottom:none}
-.card-features li::before{content:'✦';color:var(--gold);font-size:10px}
-.btn-apply{width:100%;background:var(--navy);color:var(--white);border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background 0.2s}
+.cprod{background:#fff;border-radius:16px;border:1px solid var(--border);overflow:hidden;transition:transform .3s,box-shadow .3s}
+.cprod:hover{transform:translateY(-6px);box-shadow:0 24px 48px rgba(11,31,58,.12)}
+.cprod.featured{border:2px solid var(--gold)}
+.cprod-banner{background:var(--gold);color:var(--navy);font-size:11px;font-weight:500;text-align:center;padding:6px;letter-spacing:1px;text-transform:uppercase}
+.cprod-img{background:linear-gradient(135deg,#0b1f3a,#1a4f8a);height:160px;display:flex;align-items:center;justify-content:center}
+.cmini{width:200px;height:120px;border-radius:12px;padding:16px;display:flex;flex-direction:column;justify-content:space-between}
+.cmini.plat{background:linear-gradient(135deg,#2c3e50,#34495e)}
+.cmini.gld{background:linear-gradient(135deg,#7d6608,#c9a84c)}
+.cmini.sil{background:linear-gradient(135deg,#4a4a4a,#7a7a7a)}
+.cmini-lbl{font-size:11px;color:rgba(255,255,255,.6);letter-spacing:2px}
+.cmini-brand{font-family:'Cormorant Garamond',serif;font-size:17px;color:#fff;font-weight:700}
+.cprod-body{padding:24px}
+.cprod-name{font-family:'Cormorant Garamond',serif;font-size:22px;font-weight:700;margin-bottom:4px}
+.cprod-sub{font-size:12px;color:var(--muted);margin-bottom:16px}
+.climit{font-size:13px;font-weight:500;color:var(--blue);background:#e8f0fb;border-radius:6px;padding:6px 12px;display:inline-block;margin-bottom:16px}
+.cfeatures{list-style:none;margin-bottom:20px}
+.cfeatures li{font-size:13px;color:#445;padding:5px 0;border-bottom:1px solid #f0f4f8;display:flex;align-items:center;gap:8px}
+.cfeatures li:last-child{border-bottom:none}
+.cfeatures li::before{content:'✦';color:var(--gold);font-size:10px}
+.btn-apply{width:100%;background:var(--navy);color:#fff;border:none;border-radius:8px;padding:12px;font-family:'DM Sans',sans-serif;font-size:14px;font-weight:500;cursor:pointer;transition:background .2s}
 .btn-apply:hover{background:var(--blue)}
-.btn-apply.gold-btn{background:var(--gold);color:var(--navy)}
-.btn-apply.gold-btn:hover{background:var(--gold2)}
+.btn-apply.gld{background:var(--gold);color:var(--navy)}
+.btn-apply.gld:hover{background:var(--gold2)}
 
-/* ── HOW IT WORKS ── */
-.how-section{background:var(--navy);padding:100px 60px}
+/* HOW IT WORKS */
+.how-sec{background:var(--navy);padding:100px 60px}
 .how-inner{max-width:1200px;margin:0 auto}
-.how-section .section-h2{color:var(--white)}
-.how-section .section-p{color:rgba(255,255,255,0.55)}
+.how-sec .sec-h2{color:#fff}
+.how-sec .sec-p{color:rgba(255,255,255,.55)}
 .steps-row{display:grid;grid-template-columns:repeat(4,1fr);gap:24px;margin-top:48px}
-.step-card{background:rgba(255,255,255,0.05);border:1px solid rgba(255,255,255,0.1);border-radius:14px;padding:28px;position:relative}
-.step-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:rgba(201,168,76,0.2);line-height:1;margin-bottom:12px}
-.step-icon-wrap{width:44px;height:44px;background:rgba(201,168,76,0.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
-.step-title{font-size:15px;font-weight:500;color:var(--white);margin-bottom:8px}
-.step-desc{font-size:13px;color:rgba(255,255,255,0.5);line-height:1.6}
+.step-card{background:rgba(255,255,255,.05);border:1px solid rgba(255,255,255,.1);border-radius:14px;padding:28px;position:relative}
+.step-num{font-family:'Cormorant Garamond',serif;font-size:48px;font-weight:700;color:rgba(201,168,76,.2);line-height:1;margin-bottom:12px}
+.step-icon{width:44px;height:44px;background:rgba(201,168,76,.15);border-radius:10px;display:flex;align-items:center;justify-content:center;font-size:20px;margin-bottom:14px}
+.step-title{font-size:15px;font-weight:500;color:#fff;margin-bottom:8px}
+.step-desc{font-size:13px;color:rgba(255,255,255,.5);line-height:1.6}
 .step-arrow{position:absolute;top:50%;right:-14px;transform:translateY(-50%);color:var(--gold);font-size:20px;z-index:1}
 
-/* ── APPLICATION FORM ── */
-.form-section-wrap{background:var(--cream);padding:100px 60px}
+/* FORM SECTION */
+.form-sec{background:var(--cream);padding:100px 60px}
 .form-inner{max-width:1200px;margin:0 auto;display:grid;grid-template-columns:1fr 1.4fr;gap:72px;align-items:start}
-.form-left-sticky{position:sticky;top:100px}
-.form-benefits{margin-top:32px;display:flex;flex-direction:column;gap:16px}
-.benefit-item{display:flex;gap:14px;align-items:flex-start}
-.benefit-icon{width:40px;height:40px;border-radius:10px;background:#e8f0fb;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
-.benefit-text h4{font-size:14px;font-weight:500;margin-bottom:3px}
-.benefit-text p{font-size:12px;color:var(--muted);line-height:1.5}
+.form-sticky{position:sticky;top:100px}
+.benefits{margin-top:32px;display:flex;flex-direction:column;gap:16px}
+.bitem{display:flex;gap:14px;align-items:flex-start}
+.bicon{width:40px;height:40px;border-radius:10px;background:#e8f0fb;display:flex;align-items:center;justify-content:center;font-size:18px;flex-shrink:0}
+.btext h4{font-size:14px;font-weight:500;margin-bottom:3px}
+.btext p{font-size:12px;color:var(--muted);line-height:1.5}
 
-/* FORM */
-.application-form{background:var(--white);border-radius:20px;border:1px solid var(--border);overflow:hidden}
-.form-tabs{display:flex;border-bottom:1px solid var(--border)}
-.ftab{flex:1;padding:16px;font-size:13px;font-weight:500;text-align:center;cursor:pointer;color:var(--muted);border-bottom:3px solid transparent;transition:all 0.2s}
+/* THE ACTUAL FORM */
+.sf-form-wrap{background:#fff;border-radius:20px;border:1px solid var(--border);overflow:hidden}
+/* progress tabs */
+.ftabs{display:flex;border-bottom:1px solid var(--border)}
+.ftab{flex:1;padding:16px;font-size:13px;font-weight:500;text-align:center;color:var(--muted);border-bottom:3px solid transparent;transition:all .2s;cursor:default}
 .ftab.active{color:var(--navy);border-bottom-color:var(--gold)}
+.ftab.done{color:#1e7a45;border-bottom-color:#1e7a45}
+
+/* step panels */
 .fstep{display:none;padding:32px}
 .fstep.active{display:block}
 .fstep-title{font-family:'Cormorant Garamond',serif;font-size:24px;font-weight:700;color:var(--navy);margin-bottom:4px}
 .fstep-sub{font-size:13px;color:var(--muted);margin-bottom:28px}
+
+/* fields */
 .frow{display:grid;grid-template-columns:1fr 1fr;gap:16px;margin-bottom:16px}
 .frow.full{grid-template-columns:1fr}
-.fgroup{display:flex;flex-direction:column;gap:6px}
-label.flabel{font-size:12.5px;font-weight:500;color:#334e68}
-label.flabel .req{color:var(--red)}
-.finput,.fselect,.ftextarea{border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color 0.2s;width:100%;background:var(--white)}
-.finput:focus,.fselect:focus,.ftextarea:focus{border-color:var(--blue)}
-.finput.err,.fselect.err{border-color:var(--red)}
-.ferr{font-size:11.5px;color:var(--red);display:none}
+.fg{display:flex;flex-direction:column;gap:6px}
+.flbl{font-size:12.5px;font-weight:500;color:#334e68}
+.flbl .req{color:var(--red)}
+.fi,.fs,.fta{border:1.5px solid var(--border);border-radius:8px;padding:11px 14px;font-size:14px;font-family:'DM Sans',sans-serif;color:var(--navy);outline:none;transition:border-color .2s;width:100%;background:#fff}
+.fi:focus,.fs:focus,.fta:focus{border-color:var(--blue)}
+.fi.err,.fs.err{border-color:var(--red)}
+.ferr{font-size:11.5px;color:var(--red);display:none;margin-top:2px}
 .ferr.show{display:block}
-.card-selector{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
-.csel{border:2px solid var(--border);border-radius:10px;padding:14px 12px;cursor:pointer;transition:all 0.2s;text-align:center}
+
+/* card selector */
+.csel-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:10px;margin-bottom:16px}
+.csel{border:2px solid var(--border);border-radius:10px;padding:14px 12px;cursor:pointer;transition:all .2s;text-align:center}
 .csel:hover{border-color:var(--blue)}
 .csel.picked{border-color:var(--gold);background:#fdf8ee}
 .csel-icon{font-size:24px;margin-bottom:6px}
 .csel-name{font-size:13px;font-weight:500;color:var(--navy)}
 .csel-lim{font-size:11px;color:var(--muted)}
-.form-nav{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;border-top:1px solid var(--border);background:#fafcff}
-.fbtn-back{background:var(--white);color:var(--navy);border:1.5px solid var(--border);border-radius:8px;padding:10px 22px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif}
-.fbtn-back:hover{border-color:var(--navy)}
-.fbtn-next{background:var(--navy);color:var(--white);border:none;border-radius:8px;padding:10px 26px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background 0.2s}
-.fbtn-next:hover{background:var(--blue)}
-.fbtn-submit{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:10px 26px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif}
-.step-pills{display:flex;gap:6px}
-.spill{width:24px;height:4px;border-radius:2px;background:var(--border)}
-.spill.done{background:var(--gold)}
 
 /* review */
-.review-list{display:flex;flex-direction:column;gap:0}
+.review-list{display:flex;flex-direction:column}
 .ritem{display:flex;justify-content:space-between;padding:11px 0;border-bottom:1px solid #f0f4f8;font-size:13.5px}
 .ritem:last-child{border-bottom:none}
 .rkey{color:var(--muted)}
-.rval{font-weight:500;color:var(--navy);text-align:right}
+.rval{font-weight:500;color:var(--navy);text-align:right;max-width:60%}
 
 /* success */
 .success-wrap{text-align:center;padding:48px 32px}
 .success-icon{font-size:60px;margin-bottom:16px}
 .success-wrap h3{font-family:'Cormorant Garamond',serif;font-size:30px;color:var(--navy);margin-bottom:10px}
 .success-wrap p{font-size:14px;color:var(--muted);max-width:360px;margin:0 auto 24px;line-height:1.7}
-.ref-badge{display:inline-block;background:#e8f7ee;border:1px solid #a8dfc2;border-radius:8px;padding:10px 24px;font-size:14px;font-weight:600;color:#1e7a45}
+.ref-badge{display:inline-block;background:#e8f7ee;border:1px solid #a8dfc2;border-radius:8px;padding:10px 24px;font-size:15px;font-weight:600;color:#1e7a45}
 
-/* ── FOOTER ── */
-footer{background:var(--navy);color:rgba(255,255,255,0.5);text-align:center;padding:40px 60px;font-size:13px}
-footer .flogo{font-family:'Cormorant Garamond',serif;font-size:22px;color:var(--white);margin-bottom:8px}
-footer .flogo span{color:var(--gold)}
+/* form footer */
+.fnav{display:flex;justify-content:space-between;align-items:center;padding:20px 32px;border-top:1px solid var(--border);background:#fafcff}
+.fbtn-back{background:#fff;color:var(--navy);border:1.5px solid var(--border);border-radius:8px;padding:10px 22px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:border-color .2s}
+.fbtn-back:hover{border-color:var(--navy)}
+.fbtn-next{background:var(--navy);color:#fff;border:none;border-radius:8px;padding:10px 26px;font-size:13px;font-weight:500;cursor:pointer;font-family:'DM Sans',sans-serif;transition:background .2s}
+.fbtn-next:hover{background:var(--blue)}
+.fbtn-submit{background:var(--gold);color:var(--navy);border:none;border-radius:8px;padding:10px 26px;font-size:14px;font-weight:600;cursor:pointer;font-family:'DM Sans',sans-serif}
+.step-pills{display:flex;gap:6px}
+.spill{width:28px;height:4px;border-radius:2px;background:var(--border);transition:background .3s}
+.spill.done{background:var(--gold)}
+
+/* notice banner */
+.sf-notice{background:#e8f7ee;border:1px solid #a8dfc2;border-radius:10px;padding:12px 18px;font-size:12.5px;color:#133d22;margin:16px 0 0;display:flex;gap:10px;align-items:flex-start}
+
+/* FOOTER */
+footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;padding:40px 60px;font-size:13px}
+.flogo{font-family:'Cormorant Garamond',serif;font-size:22px;color:#fff;margin-bottom:8px}
+.flogo span{color:var(--gold)}
 
 @keyframes fadeUp{from{opacity:0;transform:translateY(24px)}to{opacity:1;transform:translateY(0)}}
 @media(max-width:768px){
-  nav{padding:0 20px}
-  .hero-content,.form-inner{grid-template-columns:1fr}
-  .hero-card-visual,.form-left-sticky{display:none}
-  .cards-grid,.steps-row{grid-template-columns:1fr}
-  .section,.how-section,.form-section-wrap{padding:60px 24px}
-  .hero-h1{font-size:40px}
+  nav{padding:0 20px}.hero-content,.form-inner{grid-template-columns:1fr}
+  .card-3d,.form-sticky{display:none}.cards-grid,.steps-row{grid-template-columns:1fr}
+  .section,.how-sec,.form-sec{padding:60px 24px}.hero-h1{font-size:40px}
+  .frow{grid-template-columns:1fr}
 }
 </style>
 </head>
 <body>
 
-<!-- NAV -->
+<!-- ── NAV ── -->
 <nav>
   <div class="nav-logo">Card<span>Edge</span></div>
   <ul class="nav-links">
@@ -204,20 +202,15 @@ footer .flogo span{color:var(--gold)}
   <button class="nav-cta" onclick="document.getElementById('apply').scrollIntoView({behavior:'smooth'})">Apply Now</button>
 </nav>
 
-<!-- HERO -->
+<!-- ── HERO ── -->
 <section class="hero">
-  <div class="hero-bg">
-    <div class="hero-circle hero-circle-1"></div>
-    <div class="hero-circle hero-circle-2"></div>
-    <div class="hero-lines">
-      <div class="hero-line"></div>
-      <div class="hero-line"></div>
-      <div class="hero-line"></div>
-    </div>
+  <div class="hbg">
+    <div class="hc hc1"></div><div class="hc hc2"></div>
+    <div class="hlines"><div class="hl"></div><div class="hl"></div><div class="hl"></div></div>
   </div>
   <div class="hero-content">
     <div class="hero-text">
-      <div class="hero-eyebrow">Premium Financial Services</div>
+      <div class="eyebrow">Premium Financial Services</div>
       <h1 class="hero-h1">Where Every<br>Swipe <em>Rewards</em><br>You More</h1>
       <p class="hero-p">CardEdge offers premium credit cards designed for people who expect more — more rewards, more security, and more financial freedom.</p>
       <div class="hero-btns">
@@ -225,294 +218,202 @@ footer .flogo span{color:var(--gold)}
         <a href="#cards" class="btn-outline">Explore Cards</a>
       </div>
       <div class="hero-stats">
-        <div class="stat"><div class="stat-num">2M+</div><div class="stat-label">Happy Cardholders</div></div>
-        <div class="stat"><div class="stat-num">₹500Cr</div><div class="stat-label">Monthly Transactions</div></div>
-        <div class="stat"><div class="stat-num">99.9%</div><div class="stat-label">Uptime Security</div></div>
+        <div class="stat"><div class="stat-num">2M+</div><div class="stat-lbl">Happy Cardholders</div></div>
+        <div class="stat"><div class="stat-num">₹500Cr</div><div class="stat-lbl">Monthly Transactions</div></div>
+        <div class="stat"><div class="stat-num">99.9%</div><div class="stat-lbl">Uptime Security</div></div>
       </div>
     </div>
-    <div class="hero-card-visual">
-      <div class="card-glow"></div>
-      <div class="card-3d">
-        <div style="display:flex;justify-content:space-between;align-items:flex-start">
-          <div class="card-chip">
-            <div class="card-chip-lines">
-              <div class="card-chip-line"></div><div class="card-chip-line"></div>
-              <div class="card-chip-line"></div><div class="card-chip-line"></div>
-            </div>
-          </div>
-          <div class="card-wifi">((·))</div>
-        </div>
-        <div class="card-number">•••• •••• •••• 8472</div>
-        <div class="card-footer-row">
-          <div>
-            <div class="card-holder-label">Card Holder</div>
-            <div class="card-holder-name">RAHUL SHARMA</div>
-          </div>
-          <div class="card-expire">
-            <div class="card-holder-label">Expires</div>
-            <div class="card-holder-name">12/29</div>
-          </div>
-          <div class="card-brand">CardEdge</div>
-        </div>
+    <div class="card-3d">
+      <div style="display:flex;justify-content:space-between;align-items:flex-start">
+        <div class="chip"></div>
+        <span style="color:rgba(255,255,255,.5);font-size:20px">((·))</span>
+      </div>
+      <div class="card-num">•••• •••• •••• 8472</div>
+      <div class="card-footer-row">
+        <div><div class="card-lbl">Card Holder</div><div class="card-val">RAHUL SHARMA</div></div>
+        <div><div class="card-lbl">Expires</div><div class="card-val">12/29</div></div>
+        <div class="card-brand">CardEdge</div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- CARDS SECTION -->
+<!-- ── OUR CARDS ── -->
 <section id="cards">
   <div class="section">
-    <div class="section-eyebrow">Our Products</div>
-    <h2 class="section-h2">Choose Your Perfect Card</h2>
-    <p class="section-p">From everyday spending to luxury travel, we have a card that fits your lifestyle perfectly.</p>
+    <div class="sec-eyebrow">Our Products</div>
+    <h2 class="sec-h2">Choose Your Perfect Card</h2>
+    <p class="sec-p">From everyday spending to luxury travel, we have a card that fits your lifestyle.</p>
     <div class="cards-grid">
-
-      <div class="card-product">
-        <div class="card-product-img">
-          <div class="card-mini silver">
-            <div class="card-mini-name">CARDEDGE</div>
-            <div class="card-mini-brand">Silver</div>
-          </div>
-        </div>
-        <div class="card-product-body">
-          <div class="card-product-name">Silver Card</div>
-          <div class="card-product-sub">For starters & students</div>
-          <div class="card-limit">Up to ₹50,000 limit</div>
-          <ul class="card-features">
-            <li>1% cashback on all purchases</li>
-            <li>Zero annual fee first year</li>
-            <li>24/7 customer support</li>
-            <li>Contactless payments</li>
-          </ul>
+      <div class="cprod">
+        <div class="cprod-img"><div class="cmini sil"><div class="cmini-lbl">CARDEDGE</div><div class="cmini-brand">Silver</div></div></div>
+        <div class="cprod-body">
+          <div class="cprod-name">Silver Card</div><div class="cprod-sub">For starters &amp; students</div>
+          <div class="climit">Up to ₹50,000 limit</div>
+          <ul class="cfeatures"><li>1% cashback on all purchases</li><li>Zero annual fee first year</li><li>24/7 customer support</li><li>Contactless payments</li></ul>
           <button class="btn-apply" onclick="applyFor('Silver')">Apply Now</button>
         </div>
       </div>
-
-      <div class="card-product featured">
-        <div class="card-product-banner">⭐ Most Popular</div>
-        <div class="card-product-img">
-          <div class="card-mini gold-card">
-            <div class="card-mini-name">CARDEDGE</div>
-            <div class="card-mini-brand">Gold</div>
-          </div>
-        </div>
-        <div class="card-product-body">
-          <div class="card-product-name">Gold Card</div>
-          <div class="card-product-sub">For professionals & families</div>
-          <div class="card-limit">Up to ₹3,00,000 limit</div>
-          <ul class="card-features">
-            <li>3% cashback on dining & travel</li>
-            <li>2% cashback on shopping</li>
-            <li>Airport lounge access (4/yr)</li>
-            <li>Fuel surcharge waiver</li>
-            <li>Movie ticket discounts</li>
-          </ul>
-          <button class="btn-apply gold-btn" onclick="applyFor('Gold')">Apply Now</button>
+      <div class="cprod featured">
+        <div class="cprod-banner">⭐ Most Popular</div>
+        <div class="cprod-img"><div class="cmini gld"><div class="cmini-lbl">CARDEDGE</div><div class="cmini-brand">Gold</div></div></div>
+        <div class="cprod-body">
+          <div class="cprod-name">Gold Card</div><div class="cprod-sub">For professionals &amp; families</div>
+          <div class="climit">Up to ₹3,00,000 limit</div>
+          <ul class="cfeatures"><li>3% cashback on dining &amp; travel</li><li>2% cashback on shopping</li><li>Airport lounge access (4/yr)</li><li>Fuel surcharge waiver</li><li>Movie ticket discounts</li></ul>
+          <button class="btn-apply gld" onclick="applyFor('Gold')">Apply Now</button>
         </div>
       </div>
-
-      <div class="card-product">
-        <div class="card-product-img">
-          <div class="card-mini platinum">
-            <div class="card-mini-name">CARDEDGE</div>
-            <div class="card-mini-brand">Platinum</div>
-          </div>
-        </div>
-        <div class="card-product-body">
-          <div class="card-product-name">Platinum Card</div>
-          <div class="card-product-sub">For high-net-worth individuals</div>
-          <div class="card-limit">Up to ₹5,00,000 limit</div>
-          <ul class="card-features">
-            <li>5% cashback on all categories</li>
-            <li>Unlimited airport lounge access</li>
-            <li>Concierge service 24/7</li>
-            <li>Travel insurance included</li>
-            <li>Priority customer support</li>
-          </ul>
+      <div class="cprod">
+        <div class="cprod-img"><div class="cmini plat"><div class="cmini-lbl">CARDEDGE</div><div class="cmini-brand">Platinum</div></div></div>
+        <div class="cprod-body">
+          <div class="cprod-name">Platinum Card</div><div class="cprod-sub">For high-net-worth individuals</div>
+          <div class="climit">Up to ₹5,00,000 limit</div>
+          <ul class="cfeatures"><li>5% cashback on all categories</li><li>Unlimited airport lounge access</li><li>Concierge service 24/7</li><li>Travel insurance included</li><li>Priority customer support</li></ul>
           <button class="btn-apply" onclick="applyFor('Platinum')">Apply Now</button>
         </div>
       </div>
-
     </div>
   </div>
 </section>
 
-<!-- HOW IT WORKS -->
-<section id="how" class="how-section">
+<!-- ── HOW IT WORKS ── -->
+<section id="how" class="how-sec">
   <div class="how-inner">
-    <div class="section-eyebrow">Simple Process</div>
-    <h2 class="section-h2">Apply in Just 4 Steps</h2>
-    <p class="section-p">Our streamlined application process takes less than 5 minutes. Get your decision instantly.</p>
+    <div class="sec-eyebrow">Simple Process</div>
+    <h2 class="sec-h2">Apply in Just 4 Steps</h2>
+    <p class="sec-p">Our streamlined process takes less than 5 minutes. Get your decision instantly.</p>
     <div class="steps-row">
-      <div class="step-card">
-        <div class="step-num">01</div>
-        <div class="step-icon-wrap">📋</div>
-        <div class="step-title">Fill Application</div>
-        <div class="step-desc">Complete our simple online form with your personal and financial details.</div>
-        <div class="step-arrow">→</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">02</div>
-        <div class="step-icon-wrap">🔍</div>
-        <div class="step-title">Verification</div>
-        <div class="step-desc">Our team reviews your application and verifies your documents securely.</div>
-        <div class="step-arrow">→</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">03</div>
-        <div class="step-icon-wrap">✅</div>
-        <div class="step-title">Instant Decision</div>
-        <div class="step-desc">Receive your approval decision within minutes via email and SMS.</div>
-        <div class="step-arrow">→</div>
-      </div>
-      <div class="step-card">
-        <div class="step-num">04</div>
-        <div class="step-icon-wrap">💳</div>
-        <div class="step-title">Card Delivered</div>
-        <div class="step-desc">Your card arrives at your doorstep within 3–5 business days.</div>
-      </div>
+      <div class="step-card"><div class="step-num">01</div><div class="step-icon">📋</div><div class="step-title">Fill Application</div><div class="step-desc">Complete our simple online form with your personal and financial details.</div><div class="step-arrow">→</div></div>
+      <div class="step-card"><div class="step-num">02</div><div class="step-icon">🔍</div><div class="step-title">Verification</div><div class="step-desc">Our team reviews your application and verifies your documents securely.</div><div class="step-arrow">→</div></div>
+      <div class="step-card"><div class="step-num">03</div><div class="step-icon">✅</div><div class="step-title">Instant Decision</div><div class="step-desc">Receive your approval decision within minutes via email and SMS.</div><div class="step-arrow">→</div></div>
+      <div class="step-card"><div class="step-num">04</div><div class="step-icon">💳</div><div class="step-title">Card Delivered</div><div class="step-desc">Your card arrives at your doorstep within 3–5 business days.</div></div>
     </div>
   </div>
 </section>
 
-<!-- APPLICATION FORM -->
-<section id="apply" class="form-section-wrap">
+<!-- ── APPLICATION FORM ── -->
+<section id="apply" class="form-sec">
   <div class="form-inner">
 
-    <div class="form-left-sticky">
-      <div class="section-eyebrow">Apply Online</div>
-      <h2 class="section-h2" style="font-size:36px">Start Your Application</h2>
-      <p class="section-p" style="margin-bottom:0">Join over 2 million cardholders who trust CardEdge for their financial needs.</p>
-      <div class="form-benefits">
-        <div class="benefit-item">
-          <div class="benefit-icon">⚡</div>
-          <div class="benefit-text"><h4>Instant Processing</h4><p>Your application is reviewed within minutes by our team.</p></div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">🔒</div>
-          <div class="benefit-text"><h4>100% Secure</h4><p>Bank-grade 256-bit encryption protects your data.</p></div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">📞</div>
-          <div class="benefit-text"><h4>Dedicated Support</h4><p>Our team calls you within 24 hours to confirm your application.</p></div>
-        </div>
-        <div class="benefit-item">
-          <div class="benefit-icon">🎁</div>
-          <div class="benefit-text"><h4>Welcome Bonus</h4><p>Get ₹500 cashback on your first transaction after approval.</p></div>
-        </div>
+    <div class="form-sticky">
+      <div class="sec-eyebrow">Apply Online</div>
+      <h2 class="sec-h2" style="font-size:36px">Start Your<br>Application</h2>
+      <p class="sec-p" style="margin-bottom:0">Join over 2 million cardholders who trust CardEdge.</p>
+      <div class="benefits">
+        <div class="bitem"><div class="bicon">⚡</div><div class="btext"><h4>Instant Processing</h4><p>Reviewed within minutes by our team.</p></div></div>
+        <div class="bitem"><div class="bicon">🔒</div><div class="btext"><h4>100% Secure</h4><p>Bank-grade 256-bit encryption.</p></div></div>
+        <div class="bitem"><div class="bicon">📞</div><div class="btext"><h4>Dedicated Support</h4><p>We call you within 24 hours.</p></div></div>
+        <div class="bitem"><div class="bicon">🎁</div><div class="btext"><h4>Welcome Bonus</h4><p>₹500 cashback on your first transaction.</p></div></div>
+      </div>
+      <div class="sf-notice">
+        <span style="font-size:18px;flex-shrink:0">🔗</span>
+        <span><strong>Live Salesforce Integration:</strong> This form submits directly to Salesforce CRM. Every submission creates a real Lead record instantly in the org.</span>
       </div>
     </div>
 
+    <!-- ════════════════════════════════════════════
+         REAL SALESFORCE WEB-TO-LEAD FORM
+         OID: 00Dg500000AkwhZ
+         Fields: first_name, last_name, email, mobile
+                 + description (card type + financial info)
+    ════════════════════════════════════════════ -->
     <div>
-      <div class="application-form" id="appForm">
-        <div class="form-tabs">
-          <div class="ftab active" id="tab1">Personal</div>
-          <div class="ftab" id="tab2">Card Choice</div>
-          <div class="ftab" id="tab3">Financial</div>
-          <div class="ftab" id="tab4">Review</div>
+      <div class="sf-form-wrap">
+
+        <!-- Progress tabs (visual only) -->
+        <div class="ftabs">
+          <div class="ftab active" id="tab1">1. Personal</div>
+          <div class="ftab" id="tab2">2. Card Choice</div>
+          <div class="ftab" id="tab3">3. Financial</div>
+          <div class="ftab" id="tab4">4. Review</div>
         </div>
 
-        <!-- STEP 1 -->
+        <!-- ══ STEP 1 — Personal Info ══ -->
         <div class="fstep active" id="fs1">
           <div class="fstep-title">Personal Information</div>
-          <div class="fstep-sub">Tell us who you are. All starred fields are required.</div>
+          <div class="fstep-sub">Tell us about yourself. Fields marked * are required.</div>
           <div class="frow">
-            <div class="fgroup">
-              <label class="flabel">First Name <span class="req">*</span></label>
-              <input class="finput" id="f_fname" placeholder="Rahul"/>
-              <span class="ferr" id="e_fname">Required field</span>
+            <div class="fg">
+              <label class="flbl" for="first_name">First Name <span class="req">*</span></label>
+              <input class="fi" id="first_name" name="first_name" maxlength="40" type="text" placeholder="Rahul"/>
+              <span class="ferr" id="e_fn">Please enter your first name</span>
             </div>
-            <div class="fgroup">
-              <label class="flabel">Last Name <span class="req">*</span></label>
-              <input class="finput" id="f_lname" placeholder="Sharma"/>
-              <span class="ferr" id="e_lname">Required field</span>
+            <div class="fg">
+              <label class="flbl" for="last_name">Last Name <span class="req">*</span></label>
+              <input class="fi" id="last_name" name="last_name" maxlength="80" type="text" placeholder="Sharma"/>
+              <span class="ferr" id="e_ln">Please enter your last name</span>
             </div>
           </div>
           <div class="frow">
-            <div class="fgroup">
-              <label class="flabel">Email Address <span class="req">*</span></label>
-              <input class="finput" id="f_email" type="email" placeholder="rahul@email.com"/>
-              <span class="ferr" id="e_email">Valid email required</span>
+            <div class="fg">
+              <label class="flbl" for="email">Email Address <span class="req">*</span></label>
+              <input class="fi" id="email" name="email" maxlength="80" type="email" placeholder="rahul@email.com"/>
+              <span class="ferr" id="e_em">Please enter a valid email</span>
             </div>
-            <div class="fgroup">
-              <label class="flabel">Mobile Number <span class="req">*</span></label>
-              <input class="finput" id="f_phone" type="tel" placeholder="+91 9876543210"/>
-              <span class="ferr" id="e_phone">Required field</span>
+            <div class="fg">
+              <label class="flbl" for="mobile">Mobile Number <span class="req">*</span></label>
+              <input class="fi" id="mobile" name="mobile" maxlength="40" type="tel" placeholder="+91 9876543210"/>
+              <span class="ferr" id="e_mb">Please enter your mobile number</span>
             </div>
           </div>
           <div class="frow">
-            <div class="fgroup">
-              <label class="flabel">Date of Birth <span class="req">*</span></label>
-              <input class="finput" id="f_dob" type="date"/>
-              <span class="ferr" id="e_dob">Required field</span>
+            <div class="fg">
+              <label class="flbl" for="f_dob">Date of Birth <span class="req">*</span></label>
+              <input class="fi" id="f_dob" type="date"/>
+              <span class="ferr" id="e_dob">Please enter your date of birth</span>
             </div>
-            <div class="fgroup">
-              <label class="flabel">PAN Card Number</label>
-              <input class="finput" id="f_pan" placeholder="ABCDE1234F" style="text-transform:uppercase"/>
+            <div class="fg">
+              <label class="flbl" for="f_pan">PAN Card Number</label>
+              <input class="fi" id="f_pan" type="text" placeholder="ABCDE1234F" maxlength="10" style="text-transform:uppercase"/>
             </div>
           </div>
           <div class="frow full">
-            <div class="fgroup">
-              <label class="flabel">Residential Address</label>
-              <textarea class="ftextarea" id="f_addr" rows="2" placeholder="House No., Street, City, State, PIN Code"></textarea>
+            <div class="fg">
+              <label class="flbl" for="f_addr">Residential Address</label>
+              <textarea class="fta" id="f_addr" rows="2" placeholder="House No., Street, City, State, PIN Code"></textarea>
             </div>
           </div>
         </div>
 
-        <!-- STEP 2 -->
+        <!-- ══ STEP 2 — Card Choice ══ -->
         <div class="fstep" id="fs2">
           <div class="fstep-title">Choose Your Card</div>
           <div class="fstep-sub">Select the card type that matches your lifestyle.</div>
-          <div class="card-selector">
-            <div class="csel" id="cs_Silver" onclick="pickCard('Silver')">
-              <div class="csel-icon">🥈</div>
-              <div class="csel-name">Silver</div>
-              <div class="csel-lim">Limit: ₹50,000</div>
-            </div>
-            <div class="csel" id="cs_Gold" onclick="pickCard('Gold')">
-              <div class="csel-icon">🥇</div>
-              <div class="csel-name">Gold</div>
-              <div class="csel-lim">Limit: ₹3,00,000</div>
-            </div>
-            <div class="csel" id="cs_Platinum" onclick="pickCard('Platinum')">
-              <div class="csel-icon">💎</div>
-              <div class="csel-name">Platinum</div>
-              <div class="csel-lim">Limit: ₹5,00,000</div>
-            </div>
-            <div class="csel" id="cs_Basic" onclick="pickCard('Basic')">
-              <div class="csel-icon">💳</div>
-              <div class="csel-name">Basic</div>
-              <div class="csel-lim">Limit: ₹25,000</div>
-            </div>
+          <div class="csel-grid">
+            <div class="csel" id="cs_Silver" onclick="pickCard('Silver')"><div class="csel-icon">🥈</div><div class="csel-name">Silver</div><div class="csel-lim">Limit: ₹50,000</div></div>
+            <div class="csel" id="cs_Gold" onclick="pickCard('Gold')"><div class="csel-icon">🥇</div><div class="csel-name">Gold</div><div class="csel-lim">Limit: ₹3,00,000</div></div>
+            <div class="csel" id="cs_Platinum" onclick="pickCard('Platinum')"><div class="csel-icon">💎</div><div class="csel-name">Platinum</div><div class="csel-lim">Limit: ₹5,00,000</div></div>
+            <div class="csel" id="cs_Basic" onclick="pickCard('Basic')"><div class="csel-icon">💳</div><div class="csel-name">Basic</div><div class="csel-lim">Limit: ₹25,000</div></div>
           </div>
-          <span class="ferr" id="e_card" style="margin-bottom:12px;display:none">Please select a card type</span>
-          <div class="frow">
-            <div class="fgroup">
-              <label class="flabel">Requested Credit Limit (₹)</label>
-              <input class="finput" id="f_limit" type="number" placeholder="e.g. 100000"/>
+          <span class="ferr" id="e_card">Please select a card type</span>
+          <div class="frow" style="margin-top:16px">
+            <div class="fg">
+              <label class="flbl" for="f_limit">Requested Credit Limit (₹)</label>
+              <input class="fi" id="f_limit" type="number" placeholder="e.g. 100000"/>
             </div>
-            <div class="fgroup">
-              <label class="flabel">Primary Usage</label>
-              <select class="fselect" id="f_usage">
+            <div class="fg">
+              <label class="flbl" for="f_usage">Primary Usage</label>
+              <select class="fs" id="f_usage">
                 <option value="">-- Select --</option>
-                <option>Shopping & Lifestyle</option>
-                <option>Travel & Hospitality</option>
+                <option>Shopping &amp; Lifestyle</option>
+                <option>Travel &amp; Hospitality</option>
                 <option>Business Expenses</option>
-                <option>Dining & Entertainment</option>
+                <option>Dining &amp; Entertainment</option>
                 <option>General Use</option>
               </select>
             </div>
           </div>
         </div>
 
-        <!-- STEP 3 -->
+        <!-- ══ STEP 3 — Financial ══ -->
         <div class="fstep" id="fs3">
           <div class="fstep-title">Financial Details</div>
           <div class="fstep-sub">Helps us assess your application. Fully confidential.</div>
           <div class="frow">
-            <div class="fgroup">
-              <label class="flabel">Employment Status <span class="req">*</span></label>
-              <select class="fselect" id="f_emp">
+            <div class="fg">
+              <label class="flbl" for="f_emp">Employment Status <span class="req">*</span></label>
+              <select class="fs" id="f_emp">
                 <option value="">-- Select --</option>
                 <option>Salaried Employee</option>
                 <option>Self-Employed</option>
@@ -522,58 +423,63 @@ footer .flogo span{color:var(--gold)}
               </select>
               <span class="ferr" id="e_emp">Please select employment status</span>
             </div>
-            <div class="fgroup">
-              <label class="flabel">Company / Employer</label>
-              <input class="finput" id="f_company" placeholder="e.g. Infosys Ltd"/>
+            <div class="fg">
+              <label class="flbl" for="f_company">Company / Employer</label>
+              <input class="fi" id="f_company" type="text" placeholder="e.g. Infosys Ltd"/>
             </div>
           </div>
           <div class="frow">
-            <div class="fgroup">
-              <label class="flabel">Annual Income (₹) <span class="req">*</span></label>
-              <input class="finput" id="f_income" type="number" placeholder="e.g. 600000"/>
-              <span class="ferr" id="e_income">Required field</span>
+            <div class="fg">
+              <label class="flbl" for="f_income">Annual Income (₹) <span class="req">*</span></label>
+              <input class="fi" id="f_income" type="number" placeholder="e.g. 600000"/>
+              <span class="ferr" id="e_inc">Please enter your annual income</span>
             </div>
-            <div class="fgroup">
-              <label class="flabel">Credit Score (if known)</label>
-              <input class="finput" id="f_cscore" type="number" placeholder="300 – 850" min="300" max="850"/>
+            <div class="fg">
+              <label class="flbl" for="f_cscore">Credit Score (if known)</label>
+              <input class="fi" id="f_cscore" type="number" placeholder="300 – 850" min="300" max="850"/>
             </div>
           </div>
           <div class="frow full">
-            <div class="fgroup">
-              <label class="flabel">Existing Loans / EMIs</label>
-              <input class="finput" id="f_loans" placeholder="e.g. Home Loan ₹12,000/month (or write None)"/>
+            <div class="fg">
+              <label class="flbl" for="f_loans">Existing Loans / EMIs</label>
+              <input class="fi" id="f_loans" type="text" placeholder="e.g. Home Loan ₹12,000/month  (or write None)"/>
             </div>
           </div>
           <div class="frow full" style="margin-bottom:0">
-            <div class="fgroup">
-              <label class="flabel" style="display:flex;align-items:flex-start;gap:10px;font-weight:400;cursor:pointer">
+            <div class="fg">
+              <label class="flbl" style="display:flex;align-items:flex-start;gap:10px;font-weight:400;cursor:pointer">
                 <input type="checkbox" id="f_consent" style="width:auto;margin-top:3px;accent-color:var(--navy)"/>
-                <span>I agree to the <u>Terms & Conditions</u> and consent to a credit bureau check for this application. <span class="req">*</span></span>
+                <span>I agree to the Terms &amp; Conditions and consent to a credit bureau check. <span class="req">*</span></span>
               </label>
-              <span class="ferr" id="e_consent">You must agree to proceed</span>
+              <span class="ferr" id="e_con">You must agree to the terms to continue</span>
             </div>
           </div>
         </div>
 
-        <!-- STEP 4 REVIEW -->
+        <!-- ══ STEP 4 — Review ══ -->
         <div class="fstep" id="fs4">
-          <div class="fstep-title">Review & Submit</div>
-          <div class="fstep-sub">Check your details before submitting. You can go back to edit.</div>
+          <div class="fstep-title">Review &amp; Submit</div>
+          <div class="fstep-sub">Check all details below. Click Submit to send to Salesforce.</div>
           <div class="review-list" id="reviewList"></div>
+          <div style="margin-top:16px;background:#fdf8ee;border:1px solid #e8c87a;border-radius:8px;padding:12px 16px;font-size:12.5px;color:#5a3a00;display:flex;gap:8px">
+            <span>🔗</span>
+            <span>On clicking <strong>Submit</strong>, your data is sent securely to Salesforce and a Lead record is created in the CRM instantly.</span>
+          </div>
         </div>
 
-        <!-- SUCCESS -->
+        <!-- ══ SUCCESS ══ -->
         <div class="fstep" id="fs5">
           <div class="success-wrap">
             <div class="success-icon">🎉</div>
             <h3>Application Submitted!</h3>
-            <p>Your CardEdge credit card application has been received. Our team will review it and contact you within 1–2 business days.</p>
+            <p>Your CardEdge credit card application has been received and a Lead has been created in Salesforce. Our team will contact you within 1–2 business days.</p>
             <div class="ref-badge" id="refBadge">APP-00001</div>
-            <p style="font-size:12px;color:#aac;margin-top:16px">A confirmation has been sent to your email. Our credit analyst will call you shortly.</p>
+            <p style="font-size:12px;color:#aac;margin-top:16px">Check your Salesforce org → Leads tab to see your new record.</p>
           </div>
         </div>
 
-        <div class="form-nav" id="formNav">
+        <!-- Form nav -->
+        <div class="fnav" id="formNav">
           <button class="fbtn-back" id="btnBack" onclick="goBack()" style="visibility:hidden">← Back</button>
           <div class="step-pills">
             <div class="spill done" id="sp1"></div>
@@ -585,18 +491,54 @@ footer .flogo span{color:var(--gold)}
         </div>
       </div>
     </div>
+
   </div>
 </section>
 
-<!-- FOOTER -->
+<!-- ── FOOTER ── -->
 <footer>
   <div class="flogo">Card<span>Edge</span></div>
-  <p>© 2025 CardEdge Financial Services. All rights reserved. | RBI Registered NBFC | This is a demo site for Salesforce CRM training.</p>
+  <p>© 2025 CardEdge Financial Services. All rights reserved. | RBI Registered NBFC | Salesforce CRM Integration Active</p>
 </footer>
+
+<!-- ════════════════════════════════════════════════════
+     HIDDEN REAL SALESFORCE FORM
+     This invisible form is what actually submits to SF.
+     The visible multi-step UI above collects data,
+     then JS populates and submits this hidden form.
+════════════════════════════════════════════════════ -->
+<form id="sf_real_form"
+      action="https://webto.salesforce.com/servlet/servlet.WebToLead?encoding=UTF-8&orgId=00Dg500000AkwhZ"
+      method="POST"
+      style="display:none">
+
+  <!-- Salesforce required hidden fields -->
+  <input type="hidden" name="oid"        value="00Dg500000AkwhZ"/>
+  <input type="hidden" name="retURL"     value=""/>
+  <input type="hidden" name="lead_source" value="Web"/>
+
+  <!-- Salesforce standard Lead fields — names MUST match exactly -->
+  <input type="hidden" id="sf_first_name" name="first_name"/>
+  <input type="hidden" id="sf_last_name"  name="last_name"/>
+  <input type="hidden" id="sf_email"      name="email"/>
+  <input type="hidden" id="sf_mobile"     name="mobile"/>
+
+  <!-- All extra info packed into Description field -->
+  <input type="hidden" id="sf_description" name="description"/>
+</form>
 
 <script>
 let step = 1;
 let chosenCard = '';
+
+/* ── Card selection ── */
+function pickCard(type) {
+  ['Silver','Gold','Platinum','Basic'].forEach(t =>
+    document.getElementById('cs_'+t).classList.remove('picked'));
+  document.getElementById('cs_'+type).classList.add('picked');
+  chosenCard = type;
+  document.getElementById('e_card').classList.remove('show');
+}
 
 function applyFor(type) {
   pickCard(type);
@@ -604,18 +546,10 @@ function applyFor(type) {
   goToStep(2);
 }
 
-function pickCard(type) {
-  ['Silver','Gold','Platinum','Basic'].forEach(t => {
-    document.getElementById('cs_'+t).classList.remove('picked');
-  });
-  document.getElementById('cs_'+type).classList.add('picked');
-  chosenCard = type;
-  document.getElementById('e_card').style.display = 'none';
-}
-
-function v(id, errId, checkFn) {
+/* ── Validation ── */
+function chk(id, errId, fn) {
   const el = document.getElementById(id);
-  const ok = checkFn(el.value);
+  const ok = fn(el.value);
   el.classList.toggle('err', !ok);
   document.getElementById(errId).classList.toggle('show', !ok);
   return ok;
@@ -623,11 +557,11 @@ function v(id, errId, checkFn) {
 
 function validateStep(s) {
   if (s === 1) {
-    const a = v('f_fname','e_fname', x => x.trim());
-    const b = v('f_lname','e_lname', x => x.trim());
-    const c = v('f_email','e_email', x => /\S+@\S+\.\S+/.test(x));
-    const d = v('f_phone','e_phone', x => x.trim());
-    const e = v('f_dob','e_dob', x => x.trim());
+    const a = chk('first_name','e_fn', v => v.trim().length > 0);
+    const b = chk('last_name', 'e_ln', v => v.trim().length > 0);
+    const c = chk('email',     'e_em', v => /\S+@\S+\.\S+/.test(v));
+    const d = chk('mobile',    'e_mb', v => v.trim().length > 0);
+    const e = chk('f_dob',     'e_dob',v => v.trim().length > 0);
     return a && b && c && d && e;
   }
   if (s === 2) {
@@ -635,10 +569,10 @@ function validateStep(s) {
     return true;
   }
   if (s === 3) {
-    const a = v('f_emp','e_emp', x => x.trim());
-    const b = v('f_income','e_income', x => x.trim());
+    const a = chk('f_emp',   'e_emp', v => v.trim().length > 0);
+    const b = chk('f_income','e_inc', v => v.trim().length > 0);
     const consent = document.getElementById('f_consent');
-    const ce = document.getElementById('e_consent');
+    const ce = document.getElementById('e_con');
     if (!consent.checked) { ce.classList.add('show'); return false; }
     ce.classList.remove('show');
     return a && b;
@@ -646,45 +580,45 @@ function validateStep(s) {
   return true;
 }
 
+/* ── Build review table ── */
 function buildReview() {
-  const incomeFmt = document.getElementById('f_income').value
-    ? '₹' + Number(document.getElementById('f_income').value).toLocaleString('en-IN') : '—';
-  const limitFmt = document.getElementById('f_limit').value
-    ? '₹' + Number(document.getElementById('f_limit').value).toLocaleString('en-IN') : 'Bank decision';
+  const fmt = n => n ? '₹' + Number(n).toLocaleString('en-IN') : '—';
   const rows = [
-    ['Full Name', document.getElementById('f_fname').value + ' ' + document.getElementById('f_lname').value],
-    ['Email', document.getElementById('f_email').value],
-    ['Mobile', document.getElementById('f_phone').value],
-    ['Date of Birth', document.getElementById('f_dob').value],
-    ['PAN Number', document.getElementById('f_pan').value || 'Not provided'],
-    ['Card Type', chosenCard],
-    ['Requested Limit', limitFmt],
-    ['Primary Usage', document.getElementById('f_usage').value || 'Not specified'],
-    ['Employment', document.getElementById('f_emp').value],
-    ['Company', document.getElementById('f_company').value || 'Not provided'],
-    ['Annual Income', incomeFmt],
-    ['Credit Score', document.getElementById('f_cscore').value || 'Not provided'],
-    ['Existing EMIs', document.getElementById('f_loans').value || 'None'],
+    ['Full Name',         document.getElementById('first_name').value + ' ' + document.getElementById('last_name').value],
+    ['Email',             document.getElementById('email').value],
+    ['Mobile',            document.getElementById('mobile').value],
+    ['Date of Birth',     document.getElementById('f_dob').value],
+    ['PAN Number',        document.getElementById('f_pan').value || 'Not provided'],
+    ['Address',           document.getElementById('f_addr').value || 'Not provided'],
+    ['Card Type',         chosenCard],
+    ['Requested Limit',   document.getElementById('f_limit').value ? fmt(document.getElementById('f_limit').value) : 'Bank decision'],
+    ['Primary Usage',     document.getElementById('f_usage').value || 'Not specified'],
+    ['Employment Status', document.getElementById('f_emp').value],
+    ['Company',           document.getElementById('f_company').value || 'Not provided'],
+    ['Annual Income',     fmt(document.getElementById('f_income').value)],
+    ['Credit Score',      document.getElementById('f_cscore').value || 'Not provided'],
+    ['Existing EMIs',     document.getElementById('f_loans').value || 'None'],
   ];
-  document.getElementById('reviewList').innerHTML = rows.map(r =>
-    `<div class="ritem"><span class="rkey">${r[0]}</span><span class="rval">${r[1]}</span></div>`
-  ).join('');
+  document.getElementById('reviewList').innerHTML =
+    rows.map(r => `<div class="ritem"><span class="rkey">${r[0]}</span><span class="rval">${r[1]}</span></div>`).join('');
 }
 
+/* ── Navigate steps ── */
 function goToStep(n) {
   document.querySelectorAll('.fstep').forEach((s,i) => s.classList.toggle('active', i+1 === n));
-  ['tab1','tab2','tab3','tab4'].forEach((id, i) => {
-    document.getElementById(id).classList.toggle('active', i+1 === n);
+  ['tab1','tab2','tab3','tab4'].forEach((id,i) => {
+    const el = document.getElementById(id);
+    el.classList.remove('active','done');
+    if (i+1 === n) el.classList.add('active');
+    else if (i+1 < n) el.classList.add('done');
   });
-  for (let i = 1; i <= 4; i++) {
-    document.getElementById('sp'+i).classList.toggle('done', i <= n);
-  }
-  document.getElementById('btnBack').style.visibility = n > 1 && n < 5 ? 'visible' : 'hidden';
+  for (let i=1;i<=4;i++) document.getElementById('sp'+i).classList.toggle('done', i<=n);
+  document.getElementById('btnBack').style.visibility = (n>1 && n<5) ? 'visible' : 'hidden';
   const nb = document.getElementById('btnNext');
   if (n === 4) {
-    nb.textContent = 'Submit ✓';
+    nb.textContent = '🚀 Submit to Salesforce';
     nb.className = 'fbtn-submit';
-    nb.onclick = submitForm;
+    nb.onclick = submitToSalesforce;
   } else {
     nb.textContent = 'Next →';
     nb.className = 'fbtn-next';
@@ -704,10 +638,48 @@ function goBack() {
   if (step > 1) goToStep(step - 1);
 }
 
-function submitForm() {
+/* ══════════════════════════════════════════
+   SUBMIT TO SALESFORCE
+   Copies all form values into the hidden SF
+   form fields, then submits it to Salesforce.
+══════════════════════════════════════════ */
+function submitToSalesforce() {
+
+  /* 1. Copy standard SF fields */
+  document.getElementById('sf_first_name').value = document.getElementById('first_name').value.trim();
+  document.getElementById('sf_last_name').value  = document.getElementById('last_name').value.trim();
+  document.getElementById('sf_email').value      = document.getElementById('email').value.trim();
+  document.getElementById('sf_mobile').value     = document.getElementById('mobile').value.trim();
+
+  /* 2. Pack all extra fields into Description so nothing is lost */
+  const fmt = n => n ? '₹' + Number(n).toLocaleString('en-IN') : 'Not provided';
+  const desc = [
+    'Card Type: '         + chosenCard,
+    'Date of Birth: '     + (document.getElementById('f_dob').value     || 'Not provided'),
+    'PAN Number: '        + (document.getElementById('f_pan').value     || 'Not provided'),
+    'Address: '           + (document.getElementById('f_addr').value    || 'Not provided'),
+    'Requested Limit: '   + (document.getElementById('f_limit').value ? fmt(document.getElementById('f_limit').value) : 'Bank decision'),
+    'Primary Usage: '     + (document.getElementById('f_usage').value   || 'Not specified'),
+    'Employment Status: ' + (document.getElementById('f_emp').value     || 'Not provided'),
+    'Company: '           + (document.getElementById('f_company').value || 'Not provided'),
+    'Annual Income: '     + fmt(document.getElementById('f_income').value),
+    'Credit Score: '      + (document.getElementById('f_cscore').value  || 'Not provided'),
+    'Existing EMIs: '     + (document.getElementById('f_loans').value   || 'None'),
+    'Lead Source: Web - CardEdge Website',
+  ].join(' | ');
+  document.getElementById('sf_description').value = desc;
+
+  /* 3. Generate reference number for success screen */
   const ref = 'APP-' + Math.floor(10000 + Math.random() * 90000);
   document.getElementById('refBadge').textContent = ref;
+
+  /* 4. Show success step immediately */
   goToStep(5);
+
+  /* 5. Submit hidden form to Salesforce after tiny delay */
+  setTimeout(() => {
+    document.getElementById('sf_real_form').submit();
+  }, 800);
 }
 </script>
 </body>
