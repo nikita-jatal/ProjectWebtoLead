@@ -308,12 +308,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;paddi
       </div>
       <div class="sf-notice">
         <span style="font-size:18px;flex-shrink:0">🔗</span>
-        <span><strong>Live Salesforce Integration:</strong> This form submits directly to Salesforce CRM. Every submission creates a real Lead record instantly in the org.</span>
+        <span>Your application is processed securely. Every submission is reviewed by our team instantly.</span>
       </div>
     </div>
 
     <!-- ════════════════════════════════════════════
-         REAL SALESFORCE WEB-TO-LEAD FORM
+         REAL FORM CONNECTION
          OID: 00Dg500000AkwhZ
          Fields: first_name, last_name, email, mobile
                  + description (card type + financial info)
@@ -459,11 +459,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;paddi
         <!-- ══ STEP 4 — Review ══ -->
         <div class="fstep" id="fs4">
           <div class="fstep-title">Review &amp; Submit</div>
-          <div class="fstep-sub">Check all details below. Click Submit to send to Salesforce.</div>
+          <div class="fstep-sub">Check all details below. Click Submit to send your application.</div>
           <div class="review-list" id="reviewList"></div>
           <div style="margin-top:16px;background:#fdf8ee;border:1px solid #e8c87a;border-radius:8px;padding:12px 16px;font-size:12.5px;color:#5a3a00;display:flex;gap:8px">
             <span>🔗</span>
-            <span>On clicking <strong>Submit</strong>, your data is sent securely to Salesforce and a Lead record is created in the CRM instantly.</span>
+            <span>On clicking <strong>Submit</strong>, your application is sent securely to our team for review.</span>
           </div>
         </div>
 
@@ -472,9 +472,9 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;paddi
           <div class="success-wrap">
             <div class="success-icon">🎉</div>
             <h3>Application Submitted!</h3>
-            <p>Your CardEdge credit card application has been received and a Lead has been created in Salesforce. Our team will contact you within 1–2 business days.</p>
+            <p>Your CardEdge credit card application has been received. Our team will contact you within 1–2 business days.</p>
             <div class="ref-badge" id="refBadge">APP-00001</div>
-            <p style="font-size:12px;color:#aac;margin-top:16px">Check your Salesforce org → Leads tab to see your new record.</p>
+            
           </div>
         </div>
 
@@ -498,11 +498,11 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;paddi
 <!-- ── FOOTER ── -->
 <footer>
   <div class="flogo">Card<span>Edge</span></div>
-  <p>© 2025 CardEdge Financial Services. All rights reserved. | RBI Registered NBFC | Salesforce CRM Integration Active</p>
+  <p>© 2025 CardEdge Financial Services. All rights reserved. | RBI Registered NBFC | All Rights Reserved</p>
 </footer>
 
 <!-- ════════════════════════════════════════════════════
-     HIDDEN REAL SALESFORCE FORM
+     HIDDEN FORM
      This invisible form is what actually submits to SF.
      The visible multi-step UI above collects data,
      then JS populates and submits this hidden form.
@@ -512,12 +512,12 @@ footer{background:var(--navy);color:rgba(255,255,255,.5);text-align:center;paddi
       method="POST"
       style="display:none">
 
-  <!-- Salesforce required hidden fields -->
+  <!-- required hidden fields -->
   <input type="hidden" name="oid"        value="00Dg500000AkwhZ"/>
-  <input type="hidden" name="retURL"     value=""/>
+  <input type="hidden" name="retURL"     value="https://nikita-jatal.github.io/ProjectWebtoLead/thankyou.html"/>
   <input type="hidden" name="lead_source" value="Web"/>
 
-  <!-- Salesforce standard Lead fields — names MUST match exactly -->
+  <!-- standard fields -->
   <input type="hidden" id="sf_first_name" name="first_name"/>
   <input type="hidden" id="sf_last_name"  name="last_name"/>
   <input type="hidden" id="sf_email"      name="email"/>
@@ -616,9 +616,9 @@ function goToStep(n) {
   document.getElementById('btnBack').style.visibility = (n>1 && n<5) ? 'visible' : 'hidden';
   const nb = document.getElementById('btnNext');
   if (n === 4) {
-    nb.textContent = '🚀 Submit to Salesforce';
+    nb.textContent = '🚀 Submit Application';
     nb.className = 'fbtn-submit';
-    nb.onclick = submitToSalesforce;
+    nb.onclick = submitForm;
   } else {
     nb.textContent = 'Next →';
     nb.className = 'fbtn-next';
@@ -639,11 +639,11 @@ function goBack() {
 }
 
 /* ══════════════════════════════════════════
-   SUBMIT TO SALESFORCE
+   SUBMIT FORM
    Copies all form values into the hidden SF
-   form fields, then submits it to Salesforce.
+   form fields, then submits the application.
 ══════════════════════════════════════════ */
-function submitToSalesforce() {
+function submitForm() {
 
   /* 1. Copy standard SF fields */
   document.getElementById('sf_first_name').value = document.getElementById('first_name').value.trim();
@@ -676,7 +676,7 @@ function submitToSalesforce() {
   /* 4. Show success step immediately */
   goToStep(5);
 
-  /* 5. Submit hidden form to Salesforce after tiny delay */
+  /* 5. Submit hidden form after tiny delay */
   setTimeout(() => {
     document.getElementById('sf_real_form').submit();
   }, 800);
